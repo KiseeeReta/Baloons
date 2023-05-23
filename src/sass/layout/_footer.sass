@@ -1,0 +1,44 @@
+.footer
+  position: relative
+  background: #333333
+  &__logo
+    width: 12rem
+    height: 15rem
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -80%)
+  &__menu
+    list-style: none
+    text-align: center
+    @include respond(tab-port)
+      max-width: 45rem
+      margin: 0 auto
+      padding-top: 20rem
+  &__item
+    display: inline-block
+    padding-top: 28rem
+    padding-bottom: 8rem
+    &:not(:last-child)
+      margin-right: 5rem
+    @include respond(tab-land)
+      &:not(:last-child)
+        margin-right: 1.6rem
+    @include respond(tab-port)
+      padding-top: 0rem
+      padding-bottom: 2rem
+  &__link
+    &:link, &:visited
+      text-decoration: none
+      color: $color-white
+      font-weight: 300
+      font-size: $font-size-paragraph
+      letter-spacing: .2rem
+      display: inline-block
+      transition: all 0.2s
+      @include respond(tab-port)
+        font-size: 2rem
+    &:active
+    &:hover
+      transform: rotate(5deg) scale(1.2)
+      color: $color-brown-light
